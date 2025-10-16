@@ -1,0 +1,505 @@
+/* --- Basic Setup & Variables --- */
+:root {
+    --bg-left: #F0F7F8;
+    --bg-right: #669bbc;
+    --text-dark: #071330;
+    --text-light: #555;
+    --button-bg: #101D3A;
+    --button-text: #FFFFFF;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-left);
+    color: var(--text-dark);
+    overflow: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* --- Header & Navigation --- */
+header {
+    padding: 1.5rem 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    transform: scaleY(-1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+
+/* =============================================== */
+/* ================ CONTACT SECTION ================ */
+/* =============================================== */
+
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* --- Left Side (Info & Form) --- */
+.contact-left {
+    flex-basis: 50%;
+    padding: 60px;
+}
+
+.contact-title {
+    font-size: 2.8rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+.contact-details {
+    margin-bottom: 3rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item i {
+    font-size: 1.5rem;
+    color: var(--bg-right);
+    margin-right: 1.5rem;
+    width: 40px;
+    text-align: center;
+}
+
+.detail-text h4 {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin: 0 0 0.2rem 0;
+}
+
+.detail-text p {
+    margin: 0;
+    color: var(--text-light);
+}
+
+/* --- Floating Label Form Styling --- */
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+    font-size: 1rem;
+    background-color: transparent;
+    font-family: var(--font-primary);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-bottom-color: var(--bg-right);
+}
+
+.contact-form label {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: #999;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.contact-form input:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:focus + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+    transform: translateY(-25px);
+    font-size: 0.8rem;
+    color: var(--bg-right);
+}
+
+.submit-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--bg-right);
+    transform: translateY(-3px);
+}
+
+/* --- Right Side (Map) --- */
+.contact-right {
+    flex-basis: 50%;
+}
+
+.contact-right iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+
+/* =============================================== */
+/* ================= FAQ SECTION ================= */
+/* =============================================== */
+
+.faq-section {
+    padding: 100px 20px;
+    background-color: #fff; /* A clean white background */
+}
+
+.faq-container {
+    max-width: 800px; /* FAQs are best when not too wide */
+    margin: 0 auto;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Re-using these classes from your About Us section for consistency */
+.faq-header .section-subtitle {
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.faq-header .section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.faq-accordion {
+    border-top: 1px solid #e0e0e0;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 25px 0;
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    position: relative;
+    padding-right: 40px; /* Space for the icon */
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--bg-right); /* Use your accent color on hover */
+}
+
+/* The + / - icon */
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.faq-question.active::after {
+    content: '−'; /* This is a minus sign, not a hyphen */
+    transform: translateY(-50%) rotate(180deg);
+}
+.faq-question.active {
+    color: var(--bg-right);
+}
+
+
+.faq-answer {
+    /* The magic for the accordion effect */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), padding 0.5s ease;
+}
+
+.faq-answer p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    padding: 0 0 25px 0;
+}
+
+
+
+
+
+
+
+/* =============================================== */
+/* ================= FOOTER SECTION =============== */
+/* =============================================== */
+
+/* Ensure you have a link to Font Awesome in your HTML head for the icons */
+/* e.g., <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> */
+
+:root {
+   --footer-bg: #0077B6; /* Dark background color */
+    --footer-text: #ffffff;
+    --footer-headings: #ffffff;
+    --footer-links-hover: #ffffff;
+    --footer-border: #48d1e9;
+}
+
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    font-size: 1rem; /* Base font size for readability */
+    line-height: 1.6;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Top Features Bar --- */
+.footer-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    background-color: #fff;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #333;
+    padding: 1rem; /* Added padding for better spacing */
+}
+
+.feature-icon i {
+    font-size: 2.5rem;
+    color: #555;
+}
+
+.feature-text h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: 600;
+}
+
+.feature-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* --- Main Footer Content --- */
+.footer-main {
+    display: grid;
+    /* Updated grid for 3 columns: About (wider), Occasions, Information */
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2.5rem;
+    padding: 60px 0;
+    border-bottom: 1px solid var(--footer-border);
+}
+
+.footer-column h3, .footer-logo {
+    color: var(--footer-headings);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-logo {
+    font-family: 'Poppins', sans-serif; /* Example font */
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column p {
+    margin-bottom: 1.5rem;
+}
+
+.footer-column.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column.links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column.links a {
+    text-decoration: none;
+    color: var(--footer-text);
+    transition: color 0.3s ease;
+}
+
+.footer-column.links a:hover {
+    color: var(--footer-links-hover);
+}
+
+.social-icons a {
+    color: var(--footer-text);
+    margin-right: 1.5rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--footer-links-hover);
+}
+
+/* --- Footer Bottom Bar --- */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin-bottom: 1rem; /* Spacing for mobile view */
+}
+
+.copyright p {
+    margin: 0;
+}
+
+.footer-contact {
+    display: flex;
+    gap: 2.5rem;
+    text-align: right;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.footer-contact span {
+    display: block;
+    color: var(--footer-text);
+}
+
+.footer-contact a {
+    color: var(--footer-headings);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-bottom: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contact {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
